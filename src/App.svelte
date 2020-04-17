@@ -13,3 +13,11 @@
 	<Route path="experiences" component="{Experiences}"/>
 	<Route path="projects" component="{Projects}"/>
 </Router>
+
+<style>
+:global(:root){
+	--color-grayscale-dark: rgb(131, 130, 130);
+	--color-grayscale-medium: rgb(156, 156, 156);
+	--color-grayscale-light: rgb(231, 231, 231);
+}
+</style>

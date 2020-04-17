@@ -44,8 +44,12 @@
 	cursor: pointer;
 }
 
+.breadcrumb {
+	background: var(--color-grayscale-light);
+}
+
 #footer {
-	background: #f0f1f2;
+	background: var(--color-grayscale-light);
 }
 
 </style>
