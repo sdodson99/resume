@@ -12,8 +12,8 @@ const breadcrumbs = [
 ]
 
 const umlFunctions = [
-    new UMLClassFunction('getAbout', 'Page<About>', () => navigate("/about", { replace: true })),
-    new UMLClassFunction('getExperience', 'List<Experience>', () => navigate("/experiences", { replace: true })),
+    new UMLClassFunction('viewAbout', 'Page<About>', () => navigate("/about", { replace: true })),
+    new UMLClassFunction('getExperiences', 'List<Experience>', () => navigate("/experiences", { replace: true })),
     new UMLClassFunction('getProjects', 'List<Project>', () => navigate("/projects", { replace: true }))
 ];
 </script>
@@ -21,7 +21,7 @@ const umlFunctions = [
 <Layout breadcrumbs={breadcrumbs}>
     <div class="ss-container flex-grow-1 d-flex justify-content-center">
         <UMLClass umlFunctions={umlFunctions}>
-            <div slot="header">
+            <div slot="header" class="text-center">
                 <img src="images/singletonsean.png" alt="Logo" height="75" width="75"/>
                 <h1 class="mt-3">SingletonSean</h1>
             </div>

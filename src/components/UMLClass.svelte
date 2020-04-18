@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex-grow-1 d-flex flex-column ss-border shadow rounded-lg">
-    <div class="p-3 text-center">
+    <div class="p-3">
         <slot name="header">
             Header
         </slot>
@@ -11,7 +11,7 @@
     <div class="ss-border border-bottom"></div>
     <ul class="p-3 flex-grow-1 d-flex flex-column justify-content-around">
         {#each umlFunctions as func}
-            <li class="px-1 py-3 function link" on:click="{func.onClick}">
+            <li class="{func.onClick ? 'px-1 py-3 link' : 'px-1 py-3'}" on:click="{func.onClick}">
                 <h3>+ { func.name }(): { func.returnType }</h3>
             </li>
         {/each}
@@ -27,14 +27,11 @@ ul {
 
 .link {
     color: #007bff;
+    cursor: pointer;
 }
 
 .link:hover {
     text-decoration: underline;
-}
-
-.function {
-    cursor: pointer;
 }
 
 .ss-border {
