@@ -13,7 +13,7 @@
     ];
 
     function createViewExperienceFunction(onClick) {
-        return new UMLClassFunction('viewExperience', 'Page<Experience>', onClick)
+        return new UMLClassFunction('viewExperience', 'Page<IExperience>', onClick)
     }
 
     const interfaceFunctions = [

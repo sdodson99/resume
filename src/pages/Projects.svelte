@@ -14,7 +14,7 @@
     ];
 
     function createViewProjectFunction(onClick) {
-        return new UMLClassFunction('viewProject', 'Page<Project>', onClick)
+        return new UMLClassFunction('viewProject', 'Page<IProject>', onClick)
     }
 
     const interfaceFunctions = [

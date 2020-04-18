@@ -13,8 +13,8 @@ const breadcrumbs = [
 
 const umlFunctions = [
     new UMLClassFunction('viewAbout', 'Page<About>', () => navigate("/about", { replace: true })),
-    new UMLClassFunction('getExperiences', 'List<Experience>', () => navigate("/experiences", { replace: true })),
-    new UMLClassFunction('getProjects', 'List<Project>', () => navigate("/projects", { replace: true }))
+    new UMLClassFunction('getExperiences', 'List<IExperience>', () => navigate("/experiences", { replace: true })),
+    new UMLClassFunction('getProjects', 'List<IProject>', () => navigate("/projects", { replace: true }))
 ];
 </script>
 
