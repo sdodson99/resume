@@ -1,6 +1,5 @@
 <script>
-    import Layout from '../../components/Layout.svelte'
-    import UMLClass from '../../components/UMLClass.svelte'
+    import Layout from '../../components/layouts/Layout.svelte'
 
     import Breadcrumb from '../../models/breadcrumb.js'
 

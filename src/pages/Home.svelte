@@ -1,8 +1,8 @@
 <script>
 import { navigate } from 'svelte-routing'
 
-import Layout from '../components/Layout.svelte'
-import UMLClass from '../components/UMLClass.svelte'
+import Layout from '../components/layouts/Layout.svelte'
+import UMLClass from '../components/uml/UMLClass.svelte'
 
 import Breadcrumb from '../models/breadcrumb.js'
 import UMLClassFunction from '../models/uml-class-function.js'

@@ -1,7 +1,7 @@
 <script>
     import { Link } from 'svelte-routing'
 
-    import Breadcrumb from '../models/breadcrumb.js'
+    import Breadcrumb from '../../models/breadcrumb.js'
 
     export let breadcrumbs = [
         new Breadcrumb('Home', '/', false)
