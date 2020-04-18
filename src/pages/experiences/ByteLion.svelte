@@ -6,8 +6,8 @@
 
     const breadcrumbs = [
         new Breadcrumb('Home', '/', false),
-        new Breadcrumb('Projects', 'projects', false),
-        new Breadcrumb('ByteLion', 'projects/bytelion', true)
+        new Breadcrumb('Experiences', 'experiences', false),
+        new Breadcrumb('ByteLion', 'experiences/bytelion', true)
     ];
 
 </script>
