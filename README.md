@@ -1,3 +1,5 @@
+![Resume](https://github.com/sdodson99/resume/workflows/Resume/badge.svg?branch=master&event=push)
+
 # Resume
 
 ## Get started
