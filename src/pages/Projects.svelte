@@ -2,6 +2,7 @@
     import { navigate } from 'svelte-routing'
 
     import Layout from '../components/Layout.svelte'
+	import UMLInterface from './../components/UMLInterface.svelte';
     import UMLClass from '../components/UMLClass.svelte'
 
     import Breadcrumb from '../models/breadcrumb.js'
@@ -29,11 +30,11 @@
 
 <Layout breadcrumbs={breadcrumbs}>
     <div class="ss-container d-flex justify-content-center">
-        <UMLClass umlFunctions={interfaceFunctions}>
+        <UMLInterface umlFunctions={interfaceFunctions}>
             <div slot="header" class="text-center">
-                <h1 class="mt-3">IProject</h1>
+                <h1>IProject</h1>
             </div>
-        </UMLClass>
+        </UMLInterface>
     </div>
     <div class="d-flex flex-column flex-lg-row justify-content-center">
         <div class="mt-5 ss-container implementation">
