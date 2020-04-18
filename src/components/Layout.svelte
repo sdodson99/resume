@@ -12,7 +12,7 @@
 	const githubLink = 'https://github.com/sdodson99';
 </script>
 
-<div class="flex-grow-1 d-flex flex-column">
+<div id="root" class="d-flex flex-column">
 	<nav class="ss-container mt-3" aria-label="breadcrumb">
 		<ol class="breadcrumb m-0 shadow-sm">
 			{#each breadcrumbs as bc}
@@ -39,6 +39,10 @@
 </div>
 
 <style>
+
+#root {
+	min-height: 100vh;
+}
 
 .pointer {
 	cursor: pointer;
