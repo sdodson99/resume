@@ -14,7 +14,7 @@
 
 <div class="flex-grow-1 d-flex flex-column">
 	<nav class="ss-container mt-3" aria-label="breadcrumb">
-		<ol class="breadcrumb m-0">
+		<ol class="breadcrumb m-0 shadow-sm">
 			{#each breadcrumbs as bc}
 				<li class="{bc.isActive ? "breadcrumb-item active" : "breadcrumb-item"}">
 					{#if bc.isActive}
@@ -49,7 +49,7 @@
 }
 
 #footer {
-	background: var(--color-grayscale-light);
+	border-top: 1px solid var(--color-grayscale-light);
 }
 
 </style>

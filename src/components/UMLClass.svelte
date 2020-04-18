@@ -2,7 +2,7 @@
     export let umlFunctions = [];
 </script>
 
-<div class="flex-grow-1 d-flex flex-column ss-border rounded">
+<div class="flex-grow-1 d-flex flex-column ss-border shadow rounded-lg">
     <div class="p-3 text-center">
         <slot name="header">
             Header
@@ -11,7 +11,7 @@
     <div class="ss-border border-bottom"></div>
     <ul class="p-3 flex-grow-1 d-flex flex-column justify-content-around">
         {#each umlFunctions as func}
-            <li class="px-1 py-3 function" on:click="{func.onClick}">
+            <li class="px-1 py-3 function link" on:click="{func.onClick}">
                 <h3>+ { func.name }(): { func.returnType }</h3>
             </li>
         {/each}
@@ -23,6 +23,14 @@
 ul {
     list-style: none;
     margin: 0;
+}
+
+.link {
+    color: #007bff;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 .function {
