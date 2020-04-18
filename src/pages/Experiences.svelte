@@ -40,7 +40,7 @@
             </UMLClass>
         </div>
     </div>
-    <div class="mt-5 d-flex flex-column flex-lg-row justify-content-center">
+    <div class="d-flex flex-column flex-lg-row justify-content-center">
         <div class="mt-5 ss-container implementation">
             <UMLClass umlFunctions={triceratFunctions}>
                 <div slot="header" class="text-center">

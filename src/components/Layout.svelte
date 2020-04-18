@@ -31,9 +31,9 @@
 	</div>
 	<div id="footer" class="mt-5 d-flex justify-content-center">
 		<div class="my-3 ss-container d-flex justify-content-between">
-			<a class="mx-3 pointer" href={linkedinLink} target="_blank"><img src="images/linkedin.png" alt="LinkedIn" height="50" width="50"/></a>
-			<a class="mx-3 pointer" href={youtubeLink} target="_blank"><img src="images/youtube.png" alt="YouTube" height="50" width="50"/></a>
-			<a class="mx-3 pointer" href={githubLink} target="_blank"><img src="images/github.png" alt="GitHub" height="50" width="50"/></a>
+			<a class="mx-3 pointer" href={linkedinLink} target="_blank"><img src="/images/linkedin.png" alt="LinkedIn" height="50" width="50"/></a>
+			<a class="mx-3 pointer" href={youtubeLink} target="_blank"><img src="/images/youtube.png" alt="YouTube" height="50" width="50"/></a>
+			<a class="mx-3 pointer" href={githubLink} target="_blank"><img src="/images/github.png" alt="GitHub" height="50" width="50"/></a>
 		</div>
 	</div>
 </div>
