@@ -20,7 +20,7 @@
 					{#if bc.isActive}
 						{ bc.label }
 					{:else}
-						<span class="text-primary pointer" on:click="{() => goto(bc.to)}">{ bc.label }</span>
+						<span class="link text-primary pointer" on:click="{() => goto(bc.to)}">{ bc.label }</span>
 					{/if}
 				</li>
 			{/each}
@@ -46,6 +46,10 @@
 
 .pointer {
 	cursor: pointer;
+}
+
+.link:hover {
+	text-decoration: underline;
 }
 
 .breadcrumb {
