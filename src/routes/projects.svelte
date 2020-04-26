@@ -1,7 +1,7 @@
 <script>
-    import { navigate } from 'svelte-routing'
+	import { goto } from '@sapper/app';
 
-	import UMLListingLayout from './../components/layouts/UMLListingLayout.svelte';
+    import UMLListingLayout from './../components/layouts/UMLListingLayout.svelte';
 
     import Breadcrumb from '../models/breadcrumb.js'
     import UMLClass from '../models/uml-class.js'
@@ -22,7 +22,7 @@
     ];
 
     const showNTellFunctions = [
-        createViewProjectFunction(() => navigate("/projects/show-n-tell", { replace: true }))
+        createViewProjectFunction(() => goto("/projects/show-n-tell"))
     ];
 
     const umlInterface = new UMLClass('IProject', interfaceFunctions);
@@ -32,6 +32,10 @@
     ];
 
 </script>
+
+<svelte:head>
+    <title>Projects - SingletonSean</title>
+</svelte:head>
 
 <UMLListingLayout breadcrumbs={breadcrumbs} 
     umlInterface={umlInterface}

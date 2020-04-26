@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 }
 
+body {
+	--color-grayscale-dark: rgb(131, 130, 130);
+	--color-grayscale-medium: rgb(156, 156, 156);
+	--color-grayscale-light: rgb(231, 231, 231);
+}
+
 .ss-container {
 	margin-left: auto;
 	margin-right: auto;

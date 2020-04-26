@@ -1,5 +1,5 @@
 <script>
-    import { navigate } from 'svelte-routing'
+    import { goto } from '@sapper/app';
 
 	import UMLListingLayout from './../components/layouts/UMLListingLayout.svelte';
 
@@ -21,11 +21,11 @@
     ];
 
     const triceratFunctions = [
-        createViewExperienceFunction(() => navigate("/experiences/tricerat", { replace: true }))
+        createViewExperienceFunction(() => goto("/experiences/tricerat"))
     ];
 
     const bytelionFunctions = [
-        createViewExperienceFunction(() => navigate("/experiences/bytelion", { replace: true }))
+        createViewExperienceFunction(() => goto("/experiences/bytelion"))
     ];
 
     const umlInterface = new UMLClass('IExperience', interfaceFunctions);
@@ -36,6 +36,10 @@
     ];
 
 </script>
+
+<svelte:head>
+    <title>Experiences - SingletonSean</title>
+</svelte:head>
 
 <UMLListingLayout breadcrumbs={breadcrumbs}
     umlInterface={umlInterface}

@@ -10,6 +10,10 @@
 
 </script>
 
+<svelte:head>
+    <title>About - SingletonSean</title>
+</svelte:head>
+
 <Layout breadcrumbs={breadcrumbs}>
     <div class="ss-page-container">
         <h1 class="text-center">About</h1>
@@ -19,7 +23,7 @@
         <h2 class="mt-5 text-center text-sm-left">Education</h2>
         <div class="mt-5 row no-gutters justify-content-between">
             <div class="d-flex justify-content-center col-sm-2">
-                <img src="/images/stevenson.jpg" alt="Stevenson Logo"/>
+                <img src="stevenson.jpg" alt="Stevenson Logo"/>
             </div>
             <div class="m-3 mt-sm-0 col">
                 <p class="text-center text-sm-left"><span class="font-weight-bold">Stevenson University</span> - Owings Mills, Maryland</p>

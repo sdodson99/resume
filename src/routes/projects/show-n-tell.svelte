@@ -11,6 +11,10 @@
 
 </script>
 
+<svelte:head>
+    <title>Show 'N Tell - SingletonSean</title>
+</svelte:head>
+
 <Layout breadcrumbs={breadcrumbs}>
     <h1 class="text-center">Show 'N Tell</h1>
     <div class="ss-container mt-3 text-center">

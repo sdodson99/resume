@@ -6,11 +6,15 @@
     const breadcrumbs = [
         new Breadcrumb('Home', '/', false),
         new Breadcrumb('Experiences', 'experiences', false),
-        new Breadcrumb('ByteLion', 'experiences/bytelion', true)
+        new Breadcrumb('Tricerat', 'experiences/tricerat', true)
     ];
 
 </script>
 
+<svelte:head>
+    <title>Tricerat - SingletonSean</title>
+</svelte:head>
+
 <Layout breadcrumbs={breadcrumbs}>
-    <h1 class="text-center">ByteLion</h1>
+    <h1 class="text-center">Tricerat</h1>
 </Layout>
