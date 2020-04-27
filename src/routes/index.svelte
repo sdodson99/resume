@@ -26,7 +26,7 @@ const umlFunctions = [
     <div class="ss-container flex-grow-1 d-flex justify-content-center">
         <UMLClass umlFunctions={umlFunctions}>
             <div slot="header" class="text-center">
-                <img src="singletonsean.png" alt="Logo" height="75" width="75"/>
+                <img src="singletonsean.png" alt="SingletonSean Logo" height="75" width="75"/>
                 <h1 class="mt-3">SingletonSean</h1>
             </div>
         </UMLClass>

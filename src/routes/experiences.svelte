@@ -28,7 +28,7 @@
         createViewExperienceFunction(() => goto("/experiences/bytelion"))
     ];
 
-    const umlInterface = new UMLClass('IExperience', interfaceFunctions);
+    const umlInterface = new UMLClass('IExperience', interfaceFunctions, 'work.png');
 
     const umlClasses = [
         new UMLClass('Tricerat', triceratFunctions),

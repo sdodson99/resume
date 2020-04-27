@@ -25,7 +25,7 @@
         createViewProjectFunction(() => goto("/projects/show-n-tell"))
     ];
 
-    const umlInterface = new UMLClass('IProject', interfaceFunctions);
+    const umlInterface = new UMLClass('IProject', interfaceFunctions, 'lightbulb.png');
 
     const umlClasses = [
         new UMLClass('ShowNTell', showNTellFunctions)
