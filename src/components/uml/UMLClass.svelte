@@ -25,15 +25,6 @@ ul {
     margin: 0;
 }
 
-.link {
-    color: #007bff;
-    cursor: pointer;
-}
-
-.link:hover {
-    text-decoration: underline;
-}
-
 .ss-border {
     border: 1px solid var(--color-grayscale-light);
 }
