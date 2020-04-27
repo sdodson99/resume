@@ -78,9 +78,11 @@
             <div class="d-flex justify-content-center col-sm-2">
                 <img class="school" src="stevenson.jpg" alt="Stevenson Logo"/>
             </div>
-            <div class="mt-3 ml-3 mt-sm-0 col">
-                <h4 class="text-center text-sm-left">Stevenson University - Owings Mills, Maryland</h4>
-                <div class="mt-3 ml-1">
+            <div class="mt-3 mt-sm-0 ml-sm-3 col">
+                <div class="text-center text-sm-left ">
+                    <h4 class="d-inline">Stevenson University</h4><p class="font-italic d-md-inline ml-md-1">Owings Mills, Maryland</p> 
+                </div>
+                <div class="mt-3 ml-sm-3">
                     <div class="mt-3"><strong>Degree:</strong> Bachelor of Science, Computer Information Systems, Software Design Track</div>
                     <div class="mt-3"><strong>Expected Graduation Date:</strong> December 2020</div>
                     <div class="mt-3"><strong>GPA:</strong> 4.0</div>
