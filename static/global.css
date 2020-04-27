@@ -18,3 +18,13 @@ body {
 	max-width: 600px;
 	width: 100%;
 }
+
+.link, a {
+	color: cornflowerblue;
+	cursor: pointer;
+}
+
+.link:hover, a:hover {
+	color: #0056b3;
+	text-decoration: underline;
+}
