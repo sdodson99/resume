@@ -1,15 +1,16 @@
 <script>
 	import { goto } from '@sapper/app';
 
+	import Constants from '../../services/constants'
     import Breadcrumb from '../../models/breadcrumb.js'
 
     export let breadcrumbs = [
         new Breadcrumb('Home', '/', false)
     ]
 
-	const linkedinLink = 'https://www.linkedin.com/in/sean-dodson21/';
-	const youtubeLink = 'https://www.youtube.com/singletonsean';
-	const githubLink = 'https://github.com/sdodson99';
+	const linkedinLink = Constants.LINKEDIN_LINK;
+	const youtubeLink =  Constants.YOUTUBE_LINK;
+	const githubLink = Constants.GITHUB_LINK;
 </script>
 
 <div id="root" class="d-flex flex-column">

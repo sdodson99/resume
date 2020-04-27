@@ -1,6 +1,8 @@
 <script>
     import { goto } from '@sapper/app';
 
+    import Constants from '../services/constants'
+
     import Layout from '../components/layouts/Layout.svelte'
 
     import Breadcrumb from '../models/breadcrumb.js'
@@ -33,8 +35,8 @@
         ])
     ];
 
-	const youtubeLink = 'https://www.youtube.com/singletonsean';
-	const githubLink = 'https://github.com/sdodson99';
+	const youtubeLink = Constants.YOUTUBE_LINK;
+	const githubLink = Constants.GITHUB_LINK;
 
 </script>
 
@@ -46,7 +48,7 @@
     <div class="ss-page-container">
         <h1 class="text-center">About</h1>
 
-        <div class="mt-3 text-center text-sm-left">Hello! My name is <strong>Sean Dodson</strong>. I'm a software developer based outside of 
+        <div class="mt-3">Hello! My name is <strong>Sean Dodson</strong>. I'm a software developer based outside of 
         <strong>Baltimore, Maryland</strong>. I have a <strong>passion</strong> for taking on complex problems and genuinely have <strong>fun</strong> developing software.
         Currently, I am a <strong>student</strong> at Stevenson University and a <strong>C#/WPF</strong> software developer intern at <strong>Tricerat</strong>.
         Take a look at my skills and education below, and feel free to contact me below if you're interested in connecting!</div>

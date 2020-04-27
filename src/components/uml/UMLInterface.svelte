@@ -1,10 +1,10 @@
 <script>
 	import UMLClass from './UMLClass.svelte';
 
-    export let umlFunctions;
+    export let umlClass;
 </script>
 
-<UMLClass umlFunctions={umlFunctions}>
+<UMLClass umlClass={umlClass}>
     <div slot="header" class="text-center">
         <div>{ '<<Interface>>' }</div>
         <slot name="header"/>

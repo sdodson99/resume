@@ -11,23 +11,12 @@
 
 <Layout breadcrumbs={breadcrumbs}>
     <div class="ss-container">
-        <UMLInterface umlFunctions={umlInterface.umlFunctions}>
-            <div slot="header" class="text-center">
-                {#if umlInterface.imageUri}
-                    <img class="my-3" src={ umlInterface.imageUri} alt="Interface Image" height="75px" width="75px"/>
-                {/if}
-                <h1>{ umlInterface.name }</h1>
-            </div>
-        </UMLInterface>
+        <UMLInterface umlClass={umlInterface}/>
     </div>
     <div class="row mx-0 justify-content-center">
         {#each umlClasses as umlClass}
             <div class="ss-container mt-5">
-                <UMLClass umlFunctions={umlClass.umlFunctions}>
-                    <div slot="header" class="text-center">
-                        <h1 class="mt-3">{ umlClass.name }</h1>
-                    </div>
-                </UMLClass>
+                <UMLClass umlClass={umlClass}/>
             </div>
         {/each}
     </div>
