@@ -28,7 +28,7 @@
     const umlInterface = new UMLClass('IProject', interfaceFunctions, 'lightbulb.png');
 
     const umlClasses = [
-        new UMLClass('ShowNTell', showNTellFunctions)
+        new UMLClass('ShowNTell', showNTellFunctions, 'showntell.png')
     ];
 
 </script>

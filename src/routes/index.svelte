@@ -14,8 +14,8 @@
 
     const umlFunctions = [
         new UMLClassFunction('viewAbout', 'Page<About>', () => goto("/about")),
-        new UMLClassFunction('getExperiences', 'List<IExperience>', () => goto("/experiences")),
-        new UMLClassFunction('getProjects', 'List<IProject>', () => goto("/projects"))
+        new UMLClassFunction('getProjects', 'List<IProject>', () => goto("/projects")),
+        new UMLClassFunction('getExperiences', 'List<IExperience>', () => goto("/experiences"))
     ];
 
     const umlClass = new UMLClass('SingletonSean', umlFunctions, 'singletonsean.png');
