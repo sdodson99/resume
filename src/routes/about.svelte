@@ -54,24 +54,27 @@
         Take a look at my skills and education below, and feel free to contact me below if you're interested in connecting!</div>
 
         <h2 class="mt-5 text-center text-sm-left">Skills</h2>
-        <div class="mt-3 mt-sm-4 row no-gutters justify-content-between">
+        <div class="mt-3 mt-sm-4 row no-gutters">
             {#each skills as skill}
-                <div class="card mx-1 my-3 col-sm">
-                    <div class="card-body d-flex flex-grow-0 flex-column align-items-center">
-                        <img class="skill" src={ skill.imageUri } alt={ skill.name }/>
-                        <h4 class="card-title mt-3 text-center">{ skill.name }</h4>
+                <div class="col-sm-4 d-flex">
+                    <div class="card flex-grow-1 mx-1 my-3">
+                        <div class="card-body d-flex flex-grow-0 flex-column align-items-center">
+                            <img class="skill" src={ skill.imageUri } alt={ skill.name }/>
+                            <h4 class="card-title mt-3 text-center">{ skill.name }</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            {#each skill.subSkills as subSkill}
+                                <li class="list-group-item">{ subSkill.name }</li>
+                            {/each}
+                        </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        {#each skill.subSkills as subSkill}
-                            <li class="list-group-item">{ subSkill.name }</li>
-                        {/each}
-                    </ul>
                 </div>
             {/each}
         </div>
+
         <p class="mx-1 mt-3">Visit <span class="link" on:click={() => goto('/projects')}>projects</span> to see how I've used these skills 
-        to build software I'm passionate about. Visit my <a href="{ githubLink }">GitHub</a> to see code I've written with these skills.
-        Lastly, visit my <a href="{ youtubeLink }">YouTube</a> to see how I use these skills to provide value to other software developers.
+        to build software I'm passionate about. Visit my <a href="{ githubLink }" target="_blank">GitHub</a> to see code I've written with these skills.
+        Lastly, visit my <a href="{ youtubeLink }" target="_blank">YouTube</a> to see how I use these skills to provide value to other software developers.
 
         <h2 class="mt-5 text-center text-sm-left">Education</h2>
         <div class="mt-3 mt-sm-4 row no-gutters justify-content-between">
