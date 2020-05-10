@@ -8,9 +8,9 @@
     <div class="p-3 text-center">
         <slot name="header"/>
         {#if umlClass.imageUri}
-            <img class="my-3" src={ umlClass.imageUri} alt="Class Image" height="75px" width="75px"/>
+            <img class="my-3" src={ umlClass.imageUri} alt="Class Image"/>
         {/if}
-        <h1>{ umlClass.name }</h1>
+        <h1 class="my-1">{ umlClass.name }</h1>
     </div>
     <div class="ss-border border-bottom"></div>
     <ul class="p-3 flex-grow-1 d-flex flex-column justify-content-around">
@@ -23,6 +23,11 @@
 </div>
 
 <style>
+
+img {
+    max-height: 75px;
+    max-width: 75px;
+}
 
 ul {
     list-style: none;
