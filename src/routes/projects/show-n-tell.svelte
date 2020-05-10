@@ -71,14 +71,16 @@
         <img class="logo" src="showntell.png" alt="Show 'N Tell Logo"/>
     </div>
     <h1 class="mt-3 text-center">Show 'N Tell</h1>
-    <div class="mt-5 row no-gutters justify-space-between">
-        <h3 class="col-sm text-center"><a href={projectSite} target="_blank">Project Site</a></h3>
-        <h3 class="mx-1 d-none d-sm-block">|</h3>
-        <h3 class="col-sm text-center"><a href={codeRepository} target="_blank">Code</a></h3>
-        <h3 class="mx-1 d-none d-sm-block">|</h3>
-        <h3 class="col-sm text-center"><a href={demoVideo} target="_blank">Demo Video</a></h3>
+    
+    <div class="mt-3 row no-gutters justify-space-between">
+        <p class="col-sm text-center"><a href={projectSite} target="_blank">Project Site</a></p>
+        <p class="mx-1 d-none d-sm-block">|</p>
+        <p class="col-sm text-center"><a href={codeRepository} target="_blank">Code</a></p>
+        <p class="mx-1 d-none d-sm-block">|</p>
+        <p class="col-sm text-center"><a href={demoVideo} target="_blank">Demo Video</a></p>
     </div>
-    <div class="mt-5">
+
+    <div class="mt-3">
         Show ‘N Tell is a social media platform for users to upload and 
         discover images of other user’s sentimental, valuable, or random items.
     </div>
