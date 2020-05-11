@@ -31,8 +31,8 @@
     const umlInterface = new UMLClass('IExperience', interfaceFunctions, 'work.png');
 
     const umlClasses = [
-        new UMLClass('Tricerat', triceratFunctions),
-        new UMLClass('LawIQ', lawiqFunctions)
+        new UMLClass('Tricerat', triceratFunctions, 'tricerat.jpeg'),
+        new UMLClass('LawIQ', lawiqFunctions, 'lawiq.png')
     ];
 
 </script>
