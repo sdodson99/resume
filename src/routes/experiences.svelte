@@ -24,15 +24,15 @@
         createViewExperienceFunction(() => goto("/experiences/tricerat"))
     ];
 
-    const bytelionFunctions = [
-        createViewExperienceFunction(() => goto("/experiences/bytelion"))
+    const lawiqFunctions = [
+        createViewExperienceFunction(() => goto("/experiences/lawiq"))
     ];
 
     const umlInterface = new UMLClass('IExperience', interfaceFunctions, 'work.png');
 
     const umlClasses = [
         new UMLClass('Tricerat', triceratFunctions),
-        new UMLClass('ByteLion', bytelionFunctions)
+        new UMLClass('LawIQ', lawiqFunctions)
     ];
 
 </script>

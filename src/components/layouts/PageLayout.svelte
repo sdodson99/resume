@@ -12,9 +12,10 @@
 
 <style>
 .ss-page-container {
+    max-width: 800px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
     padding-left: 1.5em;
     padding-right: 1.5em;
 }

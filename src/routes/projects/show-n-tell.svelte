@@ -30,10 +30,10 @@
         imageUri: 'vuejs.png',
         name: "Vue.js Client",
         items: [
-            'Bootstrap',
             'Vuex',
             'Vue Router',
-            'SignalR'
+            'SignalR',
+            'Bootstrap'
         ]
     },
     {
@@ -72,7 +72,7 @@
     </div>
     <h1 class="mt-3 text-center">Show 'N Tell</h1>
     
-    <div class="mt-3 row no-gutters justify-space-between">
+    <div class="mt-3 row no-gutters">
         <p class="col-sm text-center"><a href={projectSite} target="_blank">Project Site</a></p>
         <p class="mx-1 d-none d-sm-block">|</p>
         <p class="col-sm text-center"><a href={codeRepository} target="_blank">Code</a></p>
