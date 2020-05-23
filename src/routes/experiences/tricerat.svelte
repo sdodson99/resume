@@ -40,7 +40,7 @@
     </div>
 
     <div class="mt-3">
-        Tricerat develops <strong>software</strong> to solve organizations' <strong>printing</strong> demands. I am currently a Tricerat 
+        Tricerat develops <strong>software</strong> to solve enterprise <strong>printing</strong> demands. I am currently a Tricerat 
         <strong>software developer intern</strong>. I primarily develop <strong>C# WPF (MVVM)</strong> desktop applications that perform <strong>CRUD</strong> 
         operations on databases, files, and registry keys.
     </div>
