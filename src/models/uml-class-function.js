@@ -3,9 +3,7 @@ function UMLClassFunction(name, returnType, link) {
   this.returnType = returnType;
   this.link = link;
 
-  this.clone = function () {
-    return Object.assign({}, this);
-  };
+  this.clone = () => ({ ...this });
 }
 
 export default UMLClassFunction;

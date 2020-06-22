@@ -1,5 +1,6 @@
+// @ts-ignore
 import * as sapper from '@sapper/app';
 
 sapper.start({
-	target: document.querySelector('#sapper')
+  target: document.querySelector('#sapper'),
 });
