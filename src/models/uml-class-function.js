@@ -1,7 +1,7 @@
-function UMLClassFunction(name, returnType, link) {
+function UMLClassFunction(name, returnType, route) {
   this.name = name;
   this.returnType = returnType;
-  this.link = link;
+  this.route = route;
 
   this.clone = () => ({ ...this });
 }

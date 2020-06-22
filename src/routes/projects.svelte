@@ -11,8 +11,8 @@
     new Breadcrumb('Projects', 'projects', true),
   ];
 
-  function createViewProjectFunction(onClick) {
-    return new UMLClassFunction('viewProject', 'Page<IProject>', onClick);
+  function createViewProjectFunction(route) {
+    return new UMLClassFunction('viewProject', 'Page<IProject>', route);
   }
 
   const interfaceFunctions = [createViewProjectFunction()];

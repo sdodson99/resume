@@ -17,7 +17,7 @@
         {#each umlClass.umlFunctions as func}
             <li>
                 <h3>
-                    <a class="{func.link ? 'px-1 py-3 link' : 'px-1 py-3'}" href="{func.link}">+ { func.name }(): { func.returnType }</a>
+                    <a class="{func.route ? 'px-1 py-3 link' : 'px-1 py-3'}" href="{func.route}">+ { func.name }(): { func.returnType }</a>
                 </h3>
             </li>
         {/each}
