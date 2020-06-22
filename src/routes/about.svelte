@@ -1,12 +1,10 @@
 <script context="module">
-  import Skill from '../models/skill';
-
   export async function preload() {
     const response = await this.fetch('data/skills.json');
 
     const skills = await response.json();
 
-    return { skills: skills.map((s) => Skill.fromJSON(s)) };
+    return { skills };
   }
 </script>
 
