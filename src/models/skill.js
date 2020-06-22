@@ -4,4 +4,8 @@ function Skill(name, imageUri, subSkills) {
   this.subSkills = subSkills;
 }
 
+Skill.fromJSON = function (json) {
+  return new Skill(json.name, json.image, json.subSkills);
+};
+
 export default Skill;

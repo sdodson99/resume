@@ -1,0 +1,23 @@
+[
+  {
+    "name": ".NET Core",
+    "image": "dotnetcore.png",
+    "subSkills": ["ASP.NET", "WPF (MVVM)", "Entity Framework", "NUnit + Moq"]
+  },
+  {
+    "name": "JavaScript",
+    "image": "javascript.png",
+    "subSkills": ["MERN Stack", "Vue.js (Vuex)", "Svelte (Sapper)"]
+  },
+  {
+    "name": "Azure",
+    "image": "azure.png",
+    "subSkills": [
+      "Functions",
+      "Container Instances",
+      "SQL/Cosmos Databases",
+      "DevOps (CI/CD)",
+      "App Service"
+    ]
+  }
+]

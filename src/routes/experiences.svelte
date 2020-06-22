@@ -1,9 +1,9 @@
 <script>
-  import UMLListingLayout from './../components/layouts/UMLListingLayout.svelte';
+  import UMLListingLayout from '../components/layouts/UMLListingLayout.svelte';
 
-  import Breadcrumb from '../models/breadcrumb.js';
-  import UMLClassFunction from '../models/uml-class-function.js';
-  import UMLClass from '../models/uml-class.js';
+  import Breadcrumb from '../models/breadcrumb';
+  import UMLClassFunction from '../models/uml-class-function';
+  import UMLClass from '../models/uml-class';
 
   const breadcrumbs = [
     new Breadcrumb('Home', '/', false),
@@ -38,8 +38,4 @@
   <title>Experiences - SingletonSean</title>
 </svelte:head>
 
-<UMLListingLayout
-  breadcrumbs="{breadcrumbs}"
-  umlInterface="{umlInterface}"
-  umlClasses="{umlClasses}"
-></UMLListingLayout>
+<UMLListingLayout {breadcrumbs} {umlInterface} {umlClasses} />
