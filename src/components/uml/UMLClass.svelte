@@ -15,8 +15,10 @@
     <div class="ss-border border-bottom"></div>
     <ul class="p-3 flex-grow-1 d-flex flex-column justify-content-around">
         {#each umlClass.umlFunctions as func}
-            <li class="{func.onClick ? 'px-1 py-3 link' : 'px-1 py-3'}" on:click="{func.onClick}">
-                <h3>+ { func.name }(): { func.returnType }</h3>
+            <li>
+                <h3>
+                    <a class="{func.link ? 'px-1 py-3 link' : 'px-1 py-3'}" href="{func.link}">+ { func.name }(): { func.returnType }</a>
+                </h3>
             </li>
         {/each}
     </ul>

@@ -1,102 +1,114 @@
 <script>
-    import { goto } from '@sapper/app';
+  import Constants from '../services/constants';
 
-    import Constants from '../services/constants'
+  import PageLayout from '../components/layouts/PageLayout.svelte';
+  import ListCard from './../components/content/ListCard.svelte';
 
-    import PageLayout from '../components/layouts/PageLayout.svelte'
-	import ListCard from './../components/content/ListCard.svelte';
+  import Breadcrumb from '../models/breadcrumb.js';
+  import Skill from '../models/skill.js';
 
-    import Breadcrumb from '../models/breadcrumb.js'
-    import Skill from '../models/skill.js'
+  const breadcrumbs = [
+    new Breadcrumb('Home', '/', false),
+    new Breadcrumb('About', 'about', true),
+  ];
 
-    const breadcrumbs = [
-        new Breadcrumb('Home', '/', false),
-        new Breadcrumb('About', 'about', true)
-    ];
+  const skills = [
+    new Skill('.NET Core', 'dotnetcore.png', [
+      new Skill('ASP.NET (WebAPI)'),
+      new Skill('WPF (MVVM)'),
+      new Skill('Entity Framework'),
+      new Skill('NUnit + Moq'),
+    ]),
+    new Skill('JavaScript', 'javascript.png', [
+      new Skill('MERN Stack'),
+      new Skill('Vue.js (Vuex)'),
+      new Skill('Svelte (Sapper)'),
+    ]),
+    new Skill('Azure', 'azure.png', [
+      new Skill('Functions'),
+      new Skill('Container Instances'),
+      new Skill('Storage Accounts'),
+      new Skill('SQL Databases'),
+      new Skill('CosmosDB'),
+      new Skill('DevOps (CI/CD)'),
+    ]),
+  ];
 
-    const skills = [
-        new Skill('.NET Core', 'dotnetcore.png', [
-            new Skill('ASP.NET (WebAPI)'),
-            new Skill('WPF (MVVM)'),
-            new Skill('Entity Framework'),
-            new Skill('NUnit + Moq')
-        ]),
-        new Skill('JavaScript', 'javascript.png',[
-            new Skill('MERN Stack'),
-            new Skill('Vue.js (Vuex)'),
-            new Skill('Svelte (Sapper)'),
-        ]),
-        new Skill('Azure', 'azure.png', [
-            new Skill('Functions'),
-            new Skill('Container Instances'),
-            new Skill('Storage Accounts'),
-            new Skill('SQL Databases'),
-            new Skill('CosmosDB'),
-            new Skill('DevOps (CI/CD)')
-        ])
-    ];
-
-	const youtubeLink = Constants.YOUTUBE_LINK;
-	const githubLink = Constants.GITHUB_LINK;
-
+  const youtubeLink = Constants.YOUTUBE_LINK;
+  const githubLink = Constants.GITHUB_LINK;
 </script>
 
 <svelte:head>
-    <title>About - SingletonSean</title>
+  <title>About - SingletonSean</title>
 </svelte:head>
 
-<PageLayout breadcrumbs={breadcrumbs}>
-    <h1 class="text-center">About</h1>
+<PageLayout breadcrumbs="{breadcrumbs}">
+  <h1 class="text-center">About</h1>
 
-    <div class="mt-3">Hello! My name is <strong>Sean Dodson</strong>. I'm a software developer based outside of 
-    <strong>Baltimore, Maryland</strong>. I have a <strong>passion</strong> for taking on complex problems and genuinely have <strong>fun</strong> developing software.
-    Currently, I am a <strong>student</strong> at Stevenson University and a <strong>C#/WPF</strong> software developer intern at <strong>Tricerat</strong>.
-    Take a look at my skills and education below, and feel free to contact me below if you're interested in connecting!</div>
+  <div class="mt-3">
+    Hello! My name is <strong>Sean Dodson</strong>. I'm a software developer
+    based outside of <strong>Baltimore, Maryland</strong>. I have a
+    <strong>passion</strong> for taking on complex problems and genuinely have
+    <strong>fun</strong> developing software. Currently, I am a
+    <strong>student</strong> at Stevenson University and a
+    <strong>C#/WPF</strong> software developer intern at
+    <strong>Tricerat</strong>. Take a look at my skills and education below, and
+    feel free to contact me below if you're interested in connecting!
+  </div>
 
-    <h2 class="mt-5 text-center text-sm-left">Skills</h2>
-    <div class="mt-3 mt-sm-4 row no-gutters">
-        {#each skills as skill}
-            <div class="col-sm-4 d-flex">
-                <div class="d-flex flex-grow-1 mx-1 my-3">
-                    <ListCard imageUri={ skill.imageUri } 
-                        title={ skill.name }
-                        items={ skill.subSkills.map(s =>s.name) }/>
-                </div>
-            </div>
-        {/each}
+  <h2 class="mt-5 text-center text-sm-left">Skills</h2>
+  <div class="mt-3 mt-sm-4 row no-gutters">
+    {#each skills as skill}
+    <div class="col-sm-4 d-flex">
+      <div class="d-flex flex-grow-1 mx-1 my-3">
+        <ListCard imageUri={ skill.imageUri } title={ skill.name } items={
+        skill.subSkills.map(s =>s.name) }/>
+      </div>
     </div>
+    {/each}
+  </div>
 
-    <p class="mx-1 mt-3">Visit <span class="link" on:click={() => goto('/projects')}>projects</span> to see how I've used these skills 
-    to build software I'm passionate about. Visit my <a href="{ githubLink }" target="_blank">GitHub</a> to see code I've written with these skills.
-    Lastly, visit my <a href="{ youtubeLink }" target="_blank">YouTube</a> to see how I use these skills to provide value to other software developers.
+  <p class="mx-1 mt-3">
+    Visit <a class="link" href="/projects">projects</a> to see how I've used
+    these skills to build software I'm passionate about. Visit my
+    <a href="{ githubLink }" target="_blank">GitHub</a> to see code I've written
+    with these skills. Lastly, visit my
+    <a href="{ youtubeLink }" target="_blank">YouTube</a> to see how I use these
+    skills to provide value to other software developers.
+  </p>
 
-    <h2 class="mt-5 text-center text-sm-left">Education</h2>
-    <div class="mt-3 mt-sm-4 row no-gutters justify-content-between">
-        <div class="d-flex justify-content-center col-sm-2">
-            <img class="school" src="stevenson.jpg" alt="Stevenson Logo"/>
+  <h2 class="mt-5 text-center text-sm-left">Education</h2>
+  <div class="mt-3 mt-sm-4 row no-gutters justify-content-between">
+    <div class="d-flex justify-content-center col-sm-2">
+      <img class="school" src="stevenson.jpg" alt="Stevenson Logo" />
+    </div>
+    <div class="mt-3 mt-sm-0 ml-sm-3 col">
+      <div class="text-center text-sm-left">
+        <h4 class="d-inline">Stevenson University</h4>
+        <p class="font-italic d-md-inline ml-md-1">Owings Mills, Maryland</p>
+      </div>
+      <div class="mt-3 ml-sm-3">
+        <div class="mt-3">
+          <strong>Degree:</strong> Bachelor of Science, Computer Information
+          Systems, Software Design Track
         </div>
-        <div class="mt-3 mt-sm-0 ml-sm-3 col">
-            <div class="text-center text-sm-left ">
-                <h4 class="d-inline">Stevenson University</h4><p class="font-italic d-md-inline ml-md-1">Owings Mills, Maryland</p> 
-            </div>
-            <div class="mt-3 ml-sm-3">
-                <div class="mt-3"><strong>Degree:</strong> Bachelor of Science, Computer Information Systems, Software Design Track</div>
-                <div class="mt-3"><strong>Expected Graduation Date:</strong> December 2020</div>
-                <div class="mt-3"><strong>GPA:</strong> 4.0</div>
-            </div>
+        <div class="mt-3">
+          <strong>Expected Graduation Date:</strong> December 2020
         </div>
+        <div class="mt-3"><strong>GPA:</strong> 4.0</div>
+      </div>
     </div>
+  </div>
 
-    <h2 class="mt-5 text-center text-sm-left">Contact</h2>
-    <div class="mx-1 mt-3 mt-sm-4">
-        Have a question or want to connect? Send me an email at <a href="mailto:sc.dodson4@gmail.com">sc.dodson4@gmail.com</a>.
-    </div>
+  <h2 class="mt-5 text-center text-sm-left">Contact</h2>
+  <div class="mx-1 mt-3 mt-sm-4">
+    Have a question or want to connect? Send me an email at
+    <a href="mailto:sc.dodson4@gmail.com">sc.dodson4@gmail.com</a>.
+  </div>
 </PageLayout>
 
 <style>
-
-img.school {
+  img.school {
     max-height: 100px;
-}
-
+  }
 </style>

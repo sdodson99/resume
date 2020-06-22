@@ -1,6 +1,4 @@
 <script>
-	import { goto } from '@sapper/app';
-
 	import Constants from '../../services/constants'
     import Breadcrumb from '../../models/breadcrumb.js'
 
@@ -21,7 +19,7 @@
 					{#if bc.isActive}
 						{ bc.label }
 					{:else}
-						<span class="link" on:click="{() => goto(bc.to)}">{ bc.label }</span>
+						<a class="link" href="{bc.to}">{ bc.label }</a>
 					{/if}
 				</li>
 			{/each}

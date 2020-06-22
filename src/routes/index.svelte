@@ -1,6 +1,4 @@
 <script>
-    import { goto } from '@sapper/app';
-
     import Layout from '../components/layouts/Layout.svelte'
     import UMLClassComponent from '../components/uml/UMLClass.svelte'
 
@@ -13,9 +11,9 @@
     ]
 
     const umlFunctions = [
-        new UMLClassFunction('viewAbout', 'Page<About>', () => goto("/about")),
-        new UMLClassFunction('getProjects', 'List<IProject>', () => goto("/projects")),
-        new UMLClassFunction('getExperiences', 'List<IExperience>', () => goto("/experiences"))
+        new UMLClassFunction('viewAbout', 'Page<About>', "about"),
+        new UMLClassFunction('getProjects', 'List<IProject>', "projects"),
+        new UMLClassFunction('getExperiences', 'List<IExperience>', "experiences")
     ];
 
     const umlClass = new UMLClass('SingletonSean', umlFunctions, 'singletonsean.png');

@@ -1,11 +1,11 @@
-function UMLClassFunction(name, returnType, onClick) {
-    this.name = name
-    this.returnType = returnType
-    this.onClick = onClick
+function UMLClassFunction(name, returnType, link) {
+  this.name = name;
+  this.returnType = returnType;
+  this.link = link;
 
-    this.clone = function() {
-        return Object.assign({}, this);
-    }
+  this.clone = function () {
+    return Object.assign({}, this);
+  };
 }
 
-export default UMLClassFunction
+export default UMLClassFunction;
