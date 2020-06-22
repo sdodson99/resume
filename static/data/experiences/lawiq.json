@@ -1,0 +1,14 @@
+{
+  "name": "LawIQ",
+  "imageUri": "lawiq.png",
+  "position": "Intern",
+  "timeRange": "January 2018",
+  "location": "Hampstead, MD",
+  "organizationSite": "https://www.lawiq.com/",
+  "description": "LawIQ develops <strong>software</strong> to manage data for organizations in the <strong>energy industry</strong>. I was a LawIQ <strong>intern</strong> between my Fall and Spring semester's in 2018.",
+  "tasks": [
+    "Experienced operating in an Agile (Scrum) environment",
+    "Helped organize Scrum sprints with Jira",
+    "Conducted research to keep team updated on status of potential and current customers"
+  ]
+}
