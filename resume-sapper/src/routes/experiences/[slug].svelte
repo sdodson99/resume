@@ -31,7 +31,7 @@
   const breadcrumbs = [
     new Breadcrumb('Home', '/', false),
     new Breadcrumb('Experiences', 'experiences', false),
-    new Breadcrumb(name, 'experiences/name', true),
+    new Breadcrumb(name, `experiences/${name}`, true),
   ];
 </script>
 
