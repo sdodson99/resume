@@ -11,8 +11,17 @@ module.exports = {
   async findOneByName(ctx) {
     const { name } = ctx.params;
 
-    const result = await strapi.query("projects").findOne({ name });
+    const result = await strapi
+      .query("projects")
+      .model.query((qb) => {
+        qb.where("name", name);
+      })
+      .fetch({
+        withRelated: ["features", "technologies.concepts"],
+      });
 
-    return sanitizeEntity(result, { model: strapi.models.projects });
+    const fields = result.toJSON();
+
+    return sanitizeEntity(fields, { model: strapi.models.projects });
   },
 };

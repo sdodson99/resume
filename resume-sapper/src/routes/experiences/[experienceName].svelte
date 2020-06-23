@@ -28,7 +28,6 @@
     description,
     tasks,
     imageUrl,
-    experience_tasks,
   } = experience;
 
   const breadcrumbs = [
@@ -73,7 +72,7 @@
   <h2 class="mt-5 text-center text-sm-left">Tasks</h2>
   <div class="mt-3">
     <ul class="list-group mx-1">
-      {#each experience_tasks as task}
+      {#each tasks as task}
         <li class="list-group-item">{task.description}</li>
       {/each}
     </ul>

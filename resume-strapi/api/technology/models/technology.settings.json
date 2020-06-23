@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technologies",
+  "info": {
+    "name": "ProjectTechnology"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "displayName": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "concepts": {
+      "collection": "technology-concept"
+    }
+  }
+}

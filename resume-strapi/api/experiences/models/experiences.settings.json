@@ -33,7 +33,7 @@
     "displayName": {
       "type": "string"
     },
-    "experience_tasks": {
+    "tasks": {
       "collection": "experience-task"
     }
   }

@@ -32,6 +32,9 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "technologies": {
+      "collection": "technology"
     }
   }
 }

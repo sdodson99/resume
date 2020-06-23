@@ -27,44 +27,13 @@
     repositoryUrl,
     demoUrl,
     features,
+    technologies,
   } = project;
 
   const breadcrumbs = [
     new Breadcrumb('Home', '/', false),
     new Breadcrumb('Projects', 'projects', false),
     new Breadcrumb(displayName, `projects/${name}`, true),
-  ];
-
-  const technologies = [
-    {
-      imageUri: 'dotnetcore.png',
-      name: 'ASP.NET Core',
-      items: [
-        'Entity Framework Core w/ SQL Server',
-        'SignalR',
-        'MediatR',
-        'Swagger UI',
-        'Unit Testing w/ NUnit & Moq',
-      ],
-    },
-    {
-      imageUri: 'vuejs.png',
-      name: 'Vue.js Client',
-      items: ['Vuex', 'Vue Router', 'SignalR', 'Bootstrap'],
-    },
-    {
-      imageUri: 'azure.png',
-      name: 'Deployment',
-      items: [
-        'Azure Container Instances',
-        'Azure SQL Database',
-        'Azure Blob Storage',
-        'Application Insights Logging',
-        'Azure Key Vault',
-        'Azure Event Grid & Functions',
-        'GitHub Actions CI/CD',
-      ],
-    },
   ];
 </script>
 
@@ -115,9 +84,9 @@
       <div class="col-sm-6 d-flex">
         <div class="d-flex flex-grow-1 my-3 mx-1">
           <ListCard
-            imageUri={technology.imageUri}
-            title={technology.name}
-            items={technology.items} />
+            imageUri={technology.imageUrl}
+            title={technology.displayName}
+            items={technology.concepts.map((c) => c.displayName)} />
         </div>
       </div>
     {/each}
