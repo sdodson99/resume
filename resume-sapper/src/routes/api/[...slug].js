@@ -1,8 +1,12 @@
 import fetch from 'node-fetch';
 import Constants from '../../constants';
 
-export async function getEndpoint(req, res, url) {
-  const result = await fetch(`${Constants.STRAPI_BASE_URL}${url}`);
+export async function get(req, res) {
+  const { slug } = req.params;
+
+  const url = slug.join('/');
+
+  const result = await fetch(`${Constants.STRAPI_BASE_URL}/${url}`);
 
   const data = await result.json();
   const contents = JSON.stringify(data);
