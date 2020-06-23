@@ -27,9 +27,9 @@ jobs:
         run: npm ci
         working-directory: ./resume-strapi
 
-      # - name: Start Strapi
-      #   run: npm run start-fork --if-present
-      #   working-directory: ./resume-strapi
+      - name: Start Strapi
+        run: npm run start-fork --if-present
+        working-directory: ./resume-strapi
 
       - name: Install Svelte/Sapper dependencies
         run: npm ci
