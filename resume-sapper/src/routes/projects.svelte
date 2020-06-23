@@ -1,8 +1,11 @@
 <script context="module">
   export async function preload() {
-    const response = await this.fetch('http://localhost:1337/projects');
+    const response = await this.fetch('projects.json');
 
     const projects = await response.json();
+
+    console.log(projects);
+    
 
     return { projects };
   }
