@@ -22,6 +22,13 @@
   ];
 
   function createViewProjectFunction(route) {
+    if(!route) {
+      return new UMLClassFunction(
+        'viewProject',
+        'Page<IProject>'
+      );
+    }
+
     return new UMLClassFunction(
       'viewProject',
       'Page<IProject>',

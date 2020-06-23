@@ -6,8 +6,6 @@
 
     const project = await response.json();
 
-    console.log(project)
-
     return { project };
   }
 </script>

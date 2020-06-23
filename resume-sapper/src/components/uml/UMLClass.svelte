@@ -33,12 +33,18 @@
     {#each umlClass.umlFunctions as func}
       <li>
         <h3>
+          {#if func.route}
           <a
             rel="prefetch"
-            class={func.route ? 'px-1 py-3 link' : 'px-1 py-3'}
+            class="px-1 py-3 link"
             href={func.route}>
             + {func.name}(): {func.returnType}
           </a>
+          {:else}
+          <div>
+            + {func.name}(): {func.returnType}
+          </div>
+          {/if}
         </h3>
       </li>
     {/each}
