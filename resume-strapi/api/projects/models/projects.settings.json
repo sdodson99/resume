@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "projects"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "imageUri": {
+      "type": "string"
+    }
+  }
+}

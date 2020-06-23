@@ -24,7 +24,7 @@
   <div class="p-3 text-center">
     <slot name="header" />
     {#if umlClass.imageUri}
-      <img class="my-3" src={umlClass.imageUri} alt="Class Image" />
+      <img class="my-3" src={umlClass.imageUri} alt="{umlClass.name} Image" />
     {/if}
     <h1 class="my-1">{umlClass.name}</h1>
   </div>

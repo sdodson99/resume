@@ -23,11 +23,19 @@ jobs:
         with:
           node-version: 10.x
 
-      - name: Install dependencies
+      - name: Install Strapi dependencies
+        run: npm ci
+        working-directory: ./resume-strapi
+
+      - name: Start Strapi
+        run: npm run dev --if-present
+        working-directory: ./resume-strapi
+
+      - name: Install Svelte/Sapper dependencies
         run: npm ci
         working-directory: ./resume-sapper
 
-      - name: Build
+      - name: Build Svelte/Sapper
         run: npm run export --if-present
         working-directory: ./resume-sapper
 

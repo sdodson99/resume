@@ -1,6 +1,6 @@
 <script context="module">
   export async function preload() {
-    const response = await this.fetch('data/projects.json');
+    const response = await this.fetch('http://localhost:1337/projects');
 
     const projects = await response.json();
 
@@ -24,7 +24,11 @@
   ];
 
   function createViewProjectFunction(route) {
-    return new UMLClassFunction('viewProject', 'Page<IProject>', route);
+    return new UMLClassFunction(
+      'viewProject',
+      'Page<IProject>',
+      `projects/${route}`
+    );
   }
 
   const umlInterface = new UMLClass(
@@ -34,7 +38,12 @@
   );
 
   const umlClasses = projects.map(
-    (p) => new UMLClass(p.name, [createViewProjectFunction(p.route)], p.image)
+    (p) =>
+      new UMLClass(
+        p.displayName,
+        [createViewProjectFunction(p.name)],
+        p.imageUri
+      )
   );
 </script>
 

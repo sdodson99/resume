@@ -1,5 +1,5 @@
 <script>
-  import Constants from '../../services/constants';
+  import Constants from '../../constants';
   import Breadcrumb from '../../models/breadcrumb';
 
   export let breadcrumbs = [new Breadcrumb('Home', '/', false)];

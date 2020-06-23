@@ -2,7 +2,7 @@
   import PageLayout from '../../components/layouts/PageLayout.svelte';
   import ListCard from '../../components/content/ListCard.svelte';
 
-  import Constants from '../../services/constants';
+  import Constants from '../../constants';
   import Breadcrumb from '../../models/breadcrumb';
 
   const breadcrumbs = [

@@ -11,7 +11,7 @@
 <script>
   export let skills;
 
-  import Constants from '../services/constants';
+  import Constants from '../constants';
 
   import PageLayout from '../components/layouts/PageLayout.svelte';
   import ListCard from '../components/content/ListCard.svelte';
