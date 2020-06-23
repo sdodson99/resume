@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skills",
+  "info": {
+    "name": "Skills"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "displayName": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "sub_skills": {
+      "collection": "sub-skills"
+    }
+  }
+}

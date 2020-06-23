@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sub-skills",
+      "handler": "sub-skills.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sub-skills/count",
+      "handler": "sub-skills.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sub-skills/:id",
+      "handler": "sub-skills.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sub-skills",
+      "handler": "sub-skills.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sub-skills/:id",
+      "handler": "sub-skills.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sub-skills/:id",
+      "handler": "sub-skills.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

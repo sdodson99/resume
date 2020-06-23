@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/background-information",
+      "handler": "background-information.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/background-information",
+      "handler": "background-information.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/background-information",
+      "handler": "background-information.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

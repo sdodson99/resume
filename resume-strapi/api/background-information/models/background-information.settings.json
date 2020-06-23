@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "background_informations",
+  "info": {
+    "name": "BackgroundInformation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "education": {
+      "model": "educations"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

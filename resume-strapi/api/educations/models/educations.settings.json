@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educations",
+  "info": {
+    "name": "Educations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "displayName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "string"
+    },
+    "gpa": {
+      "type": "decimal"
+    },
+    "graduation_date": {
+      "type": "date"
+    },
+    "imageUrl": {
+      "type": "string"
+    }
+  }
+}
