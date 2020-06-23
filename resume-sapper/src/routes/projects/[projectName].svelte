@@ -22,7 +22,7 @@
     name,
     displayName,
     description,
-    imageUri,
+    imageUrl,
     websiteUrl,
     repositoryUrl,
     demoUrl,
@@ -80,7 +80,7 @@
 
 <PageLayout {breadcrumbs}>
   <div class="text-center">
-    <img class="logo" src={imageUri} alt="{displayName} Logo" />
+    <img class="logo" src={imageUrl} alt="{displayName} Logo" />
   </div>
   <h1 class="mt-3 text-center">{displayName}</h1>
 

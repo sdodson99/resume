@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "projects",
+  "collectionName": "experiences",
   "info": {
-    "name": "projects"
+    "name": "Experiences"
   },
   "options": {
     "increments": true,
@@ -12,26 +12,29 @@
     "name": {
       "type": "string"
     },
-    "displayName": {
+    "imageUrl": {
       "type": "string"
     },
-    "imageUrl": {
+    "position": {
+      "type": "string"
+    },
+    "timeRange": {
+      "type": "string"
+    },
+    "location": {
       "type": "string"
     },
     "websiteUrl": {
       "type": "string"
     },
-    "repositoryUrl": {
-      "type": "string"
-    },
-    "demoUrl": {
-      "type": "string"
-    },
-    "features": {
-      "collection": "project-feature"
-    },
     "description": {
       "type": "richtext"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "experience_tasks": {
+      "collection": "experience-task"
     }
   }
 }

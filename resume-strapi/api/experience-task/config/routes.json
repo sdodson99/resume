@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/experience-tasks",
+      "handler": "experience-task.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/experience-tasks/count",
+      "handler": "experience-task.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/experience-tasks/:id",
+      "handler": "experience-task.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/experience-tasks",
+      "handler": "experience-task.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/experience-tasks/:id",
+      "handler": "experience-task.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/experience-tasks/:id",
+      "handler": "experience-task.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

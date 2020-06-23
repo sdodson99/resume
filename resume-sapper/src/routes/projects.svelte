@@ -44,7 +44,7 @@
       new UMLClass(
         p.displayName,
         [createViewProjectFunction(p.name)],
-        p.imageUri,
+        p.imageUrl,
       ),
   );
 </script>

@@ -1,8 +1,10 @@
 <script context="module">
-  export async function preload(page) {
-    const { slug } = page.params;
+  export async function preload({ params }) {
+    const { experienceName } = params;
 
-    const response = await this.fetch(`data/experiences/${slug}.json`);
+    const response = await this.fetch(
+      `data/experiences/${experienceName}.json`,
+    );
 
     const experience = await response.json();
 
@@ -11,27 +13,28 @@
 </script>
 
 <script>
-  export let experience;
-
   import PageLayout from '../../components/layouts/PageLayout.svelte';
-
   import Breadcrumb from '../../models/breadcrumb';
+
+  export let experience;
 
   const {
     name,
+    displayName,
     position,
     timeRange,
     location,
-    organizationSite,
+    websiteUrl,
     description,
     tasks,
-    imageUri,
+    imageUrl,
+    experience_tasks,
   } = experience;
 
   const breadcrumbs = [
     new Breadcrumb('Home', '/', false),
     new Breadcrumb('Experiences', 'experiences', false),
-    new Breadcrumb(name, `experiences/${name}`, true),
+    new Breadcrumb(displayName, `experiences/${name}`, true),
   ];
 </script>
 
@@ -42,14 +45,14 @@
 </style>
 
 <svelte:head>
-  <title>{name} - SingletonSean</title>
+  <title>{displayName} - SingletonSean</title>
 </svelte:head>
 
 <PageLayout {breadcrumbs}>
   <div class="text-center">
-    <img class="logo" src={imageUri} alt="{name} Logo" />
+    <img class="logo" src={imageUrl} alt="{displayName} Logo" />
   </div>
-  <h1 class="mt-3 text-center">{name}</h1>
+  <h1 class="mt-3 text-center">{displayName}</h1>
 
   <div class="mt-3 row no-gutters justify-content-center">
     <p class="col-sm text-center">{position}</p>
@@ -59,7 +62,7 @@
     <p class="col-sm text-center">{location}</p>
     <p class="mx-1 d-none d-sm-block">|</p>
     <p class="col-sm text-center">
-      <a href={organizationSite} target="_blank">Organization Site</a>
+      <a href={websiteUrl} target="_blank">Organization Site</a>
     </p>
   </div>
 
@@ -70,8 +73,8 @@
   <h2 class="mt-5 text-center text-sm-left">Tasks</h2>
   <div class="mt-3">
     <ul class="list-group mx-1">
-      {#each tasks as task}
-        <li class="list-group-item">{task}</li>
+      {#each experience_tasks as task}
+        <li class="list-group-item">{task.description}</li>
       {/each}
     </ul>
   </div>
