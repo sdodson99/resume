@@ -2,7 +2,7 @@
   export async function preload({ params }) {
     const { projectName } = params;
 
-    const response = await this.fetch(`api/projects/${projectName}`);
+    const response = await this.fetch(`data/projects/${projectName}.json`);
 
     const project = await response.json();
 
@@ -18,7 +18,16 @@
 
   export let project;
 
-  const { name, displayName, description, imageUri, websiteUrl, repositoryUrl, demoUrl, features } = project;
+  const {
+    name,
+    displayName,
+    description,
+    imageUri,
+    websiteUrl,
+    repositoryUrl,
+    demoUrl,
+    features,
+  } = project;
 
   const breadcrumbs = [
     new Breadcrumb('Home', '/', false),
@@ -89,9 +98,7 @@
     </p>
   </div>
 
-  <div class="mt-3">
-    {description}
-  </div>
+  <div class="mt-3">{description}</div>
 
   <h2 class="mt-5 text-center text-sm-left">Features</h2>
   <div class="mt-3">

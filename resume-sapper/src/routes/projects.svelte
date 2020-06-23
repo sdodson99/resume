@@ -1,6 +1,6 @@
 <script context="module">
   export async function preload() {
-    const response = await this.fetch(`api/projects/`);
+    const response = await this.fetch(`data/projects.json`);
 
     const projects = await response.json();
 
@@ -22,24 +22,21 @@
   ];
 
   function createViewProjectFunction(route) {
-    if(!route) {
-      return new UMLClassFunction(
-        'viewProject',
-        'Page<IProject>'
-      );
+    if (!route) {
+      return new UMLClassFunction('viewProject', 'Page<IProject>');
     }
 
     return new UMLClassFunction(
       'viewProject',
       'Page<IProject>',
-      `projects/${route}`
+      `projects/${route}`,
     );
   }
 
   const umlInterface = new UMLClass(
     'IProject',
     [createViewProjectFunction()],
-    'lightbulb.png'
+    'lightbulb.png',
   );
 
   const umlClasses = projects.map(
@@ -47,8 +44,8 @@
       new UMLClass(
         p.displayName,
         [createViewProjectFunction(p.name)],
-        p.imageUri
-      )
+        p.imageUri,
+      ),
   );
 </script>
 
