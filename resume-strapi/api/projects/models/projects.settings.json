@@ -17,6 +17,21 @@
     },
     "imageUri": {
       "type": "string"
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "repositoryUrl": {
+      "type": "string"
+    },
+    "demoUrl": {
+      "type": "string"
+    },
+    "features": {
+      "collection": "project-feature"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }

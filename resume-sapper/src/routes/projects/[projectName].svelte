@@ -1,19 +1,32 @@
+<script context="module">
+  export async function preload({ params }) {
+    const { projectName } = params;
+
+    const response = await this.fetch(`api/projects/${projectName}`);
+
+    const project = await response.json();
+
+    console.log(project)
+
+    return { project };
+  }
+</script>
+
 <script>
   import PageLayout from '../../components/layouts/PageLayout.svelte';
   import ListCard from '../../components/content/ListCard.svelte';
-
   import Constants from '../../constants';
   import Breadcrumb from '../../models/breadcrumb';
+
+  export let project;
+
+  const { name, displayName, description, imageUri, websiteUrl, repositoryUrl, demoUrl, features } = project;
 
   const breadcrumbs = [
     new Breadcrumb('Home', '/', false),
     new Breadcrumb('Projects', 'projects', false),
-    new Breadcrumb("Show 'N Tell", 'projects/show-n-tell', true),
+    new Breadcrumb(displayName, `projects/${name}`, true),
   ];
-
-  const projectSite = 'http://snt.seandodson.com';
-  const codeRepository = `${Constants.GITHUB_LINK}/show-n-tell`;
-  const demoVideo = 'https://youtu.be/FHNkPVIfIvw';
 
   const technologies = [
     {
@@ -46,17 +59,6 @@
       ],
     },
   ];
-
-  const features = [
-    'Explore random image posts created by other users',
-    'Upload images with descriptions to share with other users',
-    "Like and comment on other user's image posts",
-    "Explore and follow other user's profiles",
-    'View a feed of image posts created by followed user profiles',
-    'Observe real-time updates',
-    'Search for image posts',
-    'Add tags to uploaded image posts to increase search rank',
-  ];
 </script>
 
 <style>
@@ -66,39 +68,38 @@
 </style>
 
 <svelte:head>
-  <title>Show 'N Tell - SingletonSean</title>
+  <title>{displayName} - SingletonSean</title>
 </svelte:head>
 
 <PageLayout {breadcrumbs}>
   <div class="text-center">
-    <img class="logo" src="showntell.png" alt="Show 'N Tell Logo" />
+    <img class="logo" src={imageUri} alt="{displayName} Logo" />
   </div>
-  <h1 class="mt-3 text-center">Show 'N Tell</h1>
+  <h1 class="mt-3 text-center">{displayName}</h1>
 
   <div class="mt-3 row no-gutters">
     <p class="col-sm text-center">
-      <a href={projectSite} target="_blank">Project Site</a>
+      <a href={websiteUrl} target="_blank">Project Site</a>
     </p>
     <p class="mx-1 d-none d-sm-block">|</p>
     <p class="col-sm text-center">
-      <a href={codeRepository} target="_blank">Code</a>
+      <a href={repositoryUrl} target="_blank">Code</a>
     </p>
     <p class="mx-1 d-none d-sm-block">|</p>
     <p class="col-sm text-center">
-      <a href={demoVideo} target="_blank">Demo Video</a>
+      <a href={demoUrl} target="_blank">Demo Video</a>
     </p>
   </div>
 
   <div class="mt-3">
-    Show ‘N Tell is a social media platform for users to upload and discover
-    images of other user’s sentimental, valuable, or random items.
+    {description}
   </div>
 
   <h2 class="mt-5 text-center text-sm-left">Features</h2>
   <div class="mt-3">
     <ul class="list-group mx-1">
       {#each features as feature}
-        <li class="list-group-item">{feature}</li>
+        <li class="list-group-item">{feature.description}</li>
       {/each}
     </ul>
   </div>
