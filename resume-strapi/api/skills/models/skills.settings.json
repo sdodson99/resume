@@ -17,6 +17,9 @@
     },
     "sub_skills": {
       "collection": "sub-skills"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }

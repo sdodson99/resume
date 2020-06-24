@@ -24,6 +24,8 @@
   export let skills;
   export let backgroundInformation;
 
+  skills.sort((s1, s2) => s1.order > s2.order);
+
   const { description, education, email } = backgroundInformation;
   const graduationDate = moment(education.graduation_date).format('MMMM YYYY');
   const gpa = education.gpa.toFixed(1);
@@ -55,9 +57,9 @@
   </div>
 
   <h2 class="mt-5 text-center text-sm-left">Skills</h2>
-  <div class="mt-3 mt-sm-4 row no-gutters">
+  <div class="mt-3 mt-sm-4 row no-gutters ">
     {#each skills as skill}
-      <div class="col-sm-4 d-flex">
+      <div class="col-sm-6 d-flex justify-content-center">
         <div class="d-flex flex-grow-1 mx-1 my-3">
           <ListCard
             imageUri={skill.imageUrl}
