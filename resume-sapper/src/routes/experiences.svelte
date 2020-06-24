@@ -1,8 +1,6 @@
 <script context="module">
-  export async function preload({ params }) {
-    const { experienceName } = params;
-
-    const response = await this.fetch(`data/experiences.json`);
+  export async function preload() {
+    const response = await this.fetch('data/experiences.json');
 
     const experiences = await response.json();
 
@@ -31,7 +29,7 @@
     return new UMLClassFunction(
       'viewExperience',
       'Page<IExperience>',
-      `experiences/${route}`,
+      `experiences/${route}`
     );
   }
 
@@ -39,7 +37,7 @@
   const umlInterface = new UMLClass(
     'IExperience',
     interfaceFunctions,
-    'work.png',
+    'work.png'
   );
 
   const umlClasses = experiences.map(
@@ -47,8 +45,8 @@
       new UMLClass(
         e.displayName,
         [createViewExperienceFunction(e.name)],
-        e.imageUrl,
-      ),
+        e.imageUrl
+      )
   );
 </script>
 

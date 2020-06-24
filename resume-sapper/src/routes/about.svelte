@@ -5,7 +5,7 @@
     const skills = await skillsResponse.json();
 
     const backgroundInformationResponse = await this.fetch(
-      'data/background-information.json',
+      'data/background-information.json'
     );
 
     const backgroundInformation = await backgroundInformationResponse.json();

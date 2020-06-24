@@ -3,7 +3,7 @@
     const { experienceName } = params;
 
     const response = await this.fetch(
-      `data/experiences/${experienceName}.json`,
+      `data/experiences/${experienceName}.json`
     );
 
     const experience = await response.json();

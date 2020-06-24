@@ -23,6 +23,8 @@
     "import/no-extraneous-dependencies": "warn",
     "import/first": "off",
     "import/prefer-default-export": "off",
-    "import/no-mutable-exports": "warn"
+    "import/no-mutable-exports": "warn",
+    "implicit-arrow-linebreak": ["warn"],
+    "indent": ["warn"]
   }
 }
