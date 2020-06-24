@@ -15,7 +15,7 @@
   </div>
   <div class="row mx-0 justify-content-center">
     {#each umlClasses as umlClass}
-      <div class="ss-container mt-5">
+      <div class="ss-container mt-5 d-sm-flex">
         <UMLClass {umlClass} />
       </div>
     {/each}
