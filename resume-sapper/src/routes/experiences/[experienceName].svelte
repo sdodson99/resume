@@ -13,6 +13,7 @@
 </script>
 
 <script>
+  import moment from 'moment';
   import PageLayout from '../../components/layouts/PageLayout.svelte';
   import Breadcrumb from '../../models/breadcrumb';
 
@@ -22,13 +23,28 @@
     name,
     displayName,
     position,
-    timeRange,
     location,
     websiteUrl,
     description,
     tasks,
     imageUrl,
+    startDate,
+    endDate,
+    isCurrent,
   } = experience;
+
+  // Format time range.
+  const formattedStartDate = moment(startDate).format('MMMM YYYY');
+  const formattedEndDate = endDate ? moment(endDate).format('MMMM YYYY') : null;
+  let timeRange = formattedStartDate;
+
+  if (formattedEndDate) {
+    if (formattedEndDate !== formattedStartDate) {
+      timeRange += ` - ${formattedEndDate}`;
+    }
+  } else if (isCurrent) {
+    timeRange += ' - Present';
+  }
 
   const breadcrumbs = [
     new Breadcrumb('Home', '/', false),

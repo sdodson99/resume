@@ -16,6 +16,8 @@
 
   export let experiences;
 
+  experiences.sort((e1, e2) => e1.isCurrent < e2.isCurrent);
+
   const breadcrumbs = [
     new Breadcrumb('Home', '/', false),
     new Breadcrumb('Experiences', 'experiences', true),
