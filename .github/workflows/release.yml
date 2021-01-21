@@ -1,10 +1,9 @@
-name: Resume
+name: Release
 
 on:
   push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    branches:
+      - 'release'
 
 jobs:
   build:
@@ -12,7 +11,7 @@ jobs:
 
     env:
       STORAGE_ACCOUNT_KEY: ${{ secrets.STORAGE_ACCOUNT_KEY }}
-      STORAGE_ACCOUNT_NAME: resumesapper
+      STORAGE_ACCOUNT_NAME: resumesite
       STORAGE_CONTAINER_NAME: $web
 
     steps:
@@ -40,7 +39,6 @@ jobs:
         working-directory: ./resume-sapper
 
       - name: Deploy
-        if: github.event_name == 'push'
         uses: azure/CLI@v1
         with:
           azcliversion: 2.0.72
