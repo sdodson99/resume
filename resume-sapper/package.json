@@ -1,7 +1,7 @@
 {
   "name": "resume-sapper",
   "description": "A resume site made with Sapper.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",

@@ -7,7 +7,7 @@
 <style>
   img {
     max-width: 100%;
-    max-height: 200px;
+    max-height: 100px;
   }
 </style>
 
@@ -18,7 +18,7 @@
     {/if}
     <h4 class="card-title mt-3 text-center">{title}</h4>
   </div>
-  <ul class="list-group list-group-flush">
+  <ul class="flex-grow-1 list-group list-group-flush">
     {#each items as item}
       <li class="list-group-item">{item}</li>
     {/each}

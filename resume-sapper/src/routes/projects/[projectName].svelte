@@ -53,17 +53,21 @@
   <h1 class="mt-3 text-center">{displayName}</h1>
 
   <div class="mt-3 row no-gutters">
-    <p class="col-sm text-center">
-      <a href={websiteUrl} target="_blank">Project Site</a>
-    </p>
-    <p class="mx-1 d-none d-sm-block">|</p>
+    {#if websiteUrl}
+      <p class="col-sm text-center">
+        <a href={websiteUrl} target="_blank">Project Site</a>
+      </p>
+      <p class="mx-1 d-none d-sm-block">|</p>
+    {/if}
     <p class="col-sm text-center">
       <a href={repositoryUrl} target="_blank">Code</a>
     </p>
-    <p class="mx-1 d-none d-sm-block">|</p>
-    <p class="col-sm text-center">
-      <a href={demoUrl} target="_blank">Demo Video</a>
-    </p>
+    {#if demoUrl}
+      <p class="mx-1 d-none d-sm-block">|</p>
+      <p class="col-sm text-center">
+        <a href={demoUrl} target="_blank">Demo Video</a>
+      </p>
+    {/if}
   </div>
 
   <div class="mt-3">{description}</div>
